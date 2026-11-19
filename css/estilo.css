@@ -1,0 +1,188 @@
+/* --- RESET GENERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Fondo verde oscuro profundo que descansa la vista por completo */
+body {
+    background-color: #0d1410; 
+    color: #cbd5e1; /* Texto gris claro suave */
+    padding: 40px 15px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENEDOR PRINCIPAL FLUIDO */
+.container {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Título de la Tienda */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #42ad56; /* Detalle inferior en verde pasto */
+    padding-bottom: 12px;
+}
+
+/* --- REJILLA DE PRODUCTOS (GRID) --- */
+#productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjeta de Producto Estilo Bosque */
+.producto {
+    background-color: #141f19; /* Gris verdoso oscuro */
+    border: 1px solid rgba(66, 173, 86, 0.15);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.3s ease, border-color 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-3px);
+    border-color: #42ad56; /* Resalta en verde pasto al pasar el mouse */
+}
+
+.producto h2 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.producto p {
+    color: #a7f3d0; /* Verde hoja claro para el precio */
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Estilos de Etiquetas, Selectores e Inputs */
+label {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: -4px;
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #0d1410;
+    border: 1px solid #24372e;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+select:focus, input:focus {
+    border-color: #42ad56;
+}
+
+/* Botón Añadir en Verde Pasto */
+.agregar {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #42ad56; /* Color pasto vibrante */
+    color: #0d1410; /* Texto oscuro para buen contraste */
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.agregar:hover {
+    background-color: #4ec463;
+    box-shadow: 0 0 12px rgba(66, 173, 86, 0.4);
+}
+
+/* --- SECCIÓN DEL CARRITO DE COMPRAS --- */
+#carrito {
+    background-color: #141f19;
+    border: 1px solid rgba(66, 173, 86, 0.15);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#carrito h2 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid #42ad56;
+    padding-left: 10px;
+}
+
+/* Lista de compras */
+#lista-carrito {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+#lista-carrito li {
+    padding: 10px 0;
+    border-bottom: 1px solid #24372e;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    color: #cbd5e1;
+}
+
+/* Precio Total */
+#total {
+    font-size: 18px;
+    font-weight: 700;
+    color: #a7f3d0;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+/* Botón Finalizar Compra */
+#comprar {
+    width: 100%;
+    padding: 14px;
+    background-color: transparent;
+    color: #42ad56;
+    border: 2px solid #42ad56;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#comprar:hover {
+    background-color: #42ad56;
+    color: #0d1410;
+    box-shadow: 0 0 15px rgba(66, 173, 86, 0.3);
+}
+
+/* --- RESPONSIVO PARA PANTALLAS CHICAS --- */
+@media (max-width: 600px) {
+    .container { padding: 0 10px; }
+    h1 { font-size: 22px; }
+    .producto { padding: 15px; }
+}

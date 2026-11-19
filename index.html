@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tienda de Ropa</h1>
+        <div id="productos">
+            <div class="producto">
+                <h2>Remera</h2>
+                <p>Precio: $20</p>
+                <label for="color">Color:</label>
+                <select class="color">
+                    <option value="azul">Azul</option>
+                    <option value="rojo">Rojo</option>
+                    <option value="blanco">Blanco</option>
+                    <option value="amarillo">Amarillo</option>
+                    <option value="negro">Negro</option>
+                    <option value="celeste">Celeste</option>
+                    <option value="otros">Otros</option>
+                </select>
+                <label for="talle">Talle:</label>
+                <select class="talle">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" class="cantidad" value="1" min="1">
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <h2>Pantalón</h2>
+                <p>Precio: $30</p>
+                <label for="color">Color:</label>
+                <select class="color">
+                    <option value="azul">Azul</option>
+                    <option value="rojo">Rojo</option>
+                    <option value="blanco">Blanco</option>
+                    <option value="amarillo">Amarillo</option>
+                    <option value="negro">Negro</option>
+                    <option value="celeste">Celeste</option>
+                    <option value="otros">Otros</option>
+                </select>
+                <label for="talle">Talle:</label>
+                <select class="talle">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" class="cantidad" value="1" min="1">
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <h2>Buzo</h2>
+                <p>Precio: $40</p>
+                <label for="color">Color:</label>
+                <select class="color">
+                    <option value="azul">Azul</option>
+                    <option value="rojo">Rojo</option>
+                    <option value="blanco">Blanco</option>
+                    <option value="amarillo">Amarillo</option>
+                    <option value="negro">Negro</option>
+                    <option value="celeste">Celeste</option>
+                    <option value="otros">Otros</option>
+                </select>
+                <label for="talle">Talle:</label>
+                <select class="talle">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" class="cantidad" value="1" min="1">
+                <button class="agregar">Agregar al carrito</button>
+            </div>
+        </div>
+        <div id="carrito">
+            <h2>Carrito</h2>
+            <ul id="lista-carrito"></ul>
+            <p id="total">Total: $0</p>
+            <button id="comprar">Finalizar Compra</button>
+        </div>
+    </div>
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>
